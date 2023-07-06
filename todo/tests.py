@@ -14,7 +14,7 @@ class TaskModelTestCase(TestCase):
         task = Task(title='task1', due_at=due)
         task.save()
 
-        tast = Task.objects.get(pk=task.pk)
+        task = Task.objects.get(pk=task.pk)
         self.assertEqual(task.title, 'task1')
         self.assertFalse(task.completed)
         self.assertEqual(task.due_at, due)
